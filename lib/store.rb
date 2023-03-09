@@ -5,8 +5,8 @@ class Store < ActiveRecord::Base
   validate :must_include
 
   def must_include
-    if !mens_apparel || !womens_apparel
-      errors.add(:must_carry, "Store must include at least one of men's apparel or women's apparel")
+    if !:mens_apparel || !:womens_apparel
+      errors.add(:must_include, "Store must include at least one of men's apparel or women's apparel")
     end
   end
 end
